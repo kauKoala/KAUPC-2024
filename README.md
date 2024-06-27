@@ -1,4 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KAUPC-2024 Promotion page
+
+> This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+## Abstract
+
+- This is a promotion page for the 4th Algorithm Competition to be held by Korea Aerospace University in 2024.
+- Built based on next.js 14.2.
+- The basic form was created by citing [2022 KAUPC Promotion Page](https://github.com/kauKoala/KAUPC-2022).
+
+
+## Preview
+
+<br>
 
 ## Getting Started
 
