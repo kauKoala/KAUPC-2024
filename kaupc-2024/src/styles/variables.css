@@ -1,0 +1,15 @@
+:root {
+    --background-color: #000000;
+    --font-color: #ffffff;
+    --header-font-weight: bold;
+    --table-border-color: #ddd;
+    --table-header-background: #f2f2f2;
+    --transition-opacity: 1s ease-in-out;
+    --primary-color: #ffffff;
+    --secondary-color: #6c757d;
+    --primary-button-bg: #007bff;
+    --primary-button-color: #fff;
+    --secondary-button-bg: #6c757d;
+    --secondary-button-color: #fff;
+    --disabled-button-bg: #ccc;
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const Apply = () => {
     const [isStudent, setIsStudent] = useState(false);

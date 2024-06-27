@@ -1,0 +1,86 @@
+.container {
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.logo-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    padding: 20px;
+}
+
+.footer-header {
+    margin-bottom: 10px;
+}
+
+.info-section-container {
+    padding: 20px;
+}
+
+.info-header {
+    margin-top: 20px;
+}
+
+.info-subheader {
+    margin-top: 10px;
+}
+
+.info-detail {
+    margin-bottom: 20px;
+}
+
+.info-list-item {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.info-table {
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+.info-table-header, .info-table-cell {
+    padding: 8px;
+}
+
+.sum-section-container {
+    padding: 20px;
+}
+
+.sum-info-list li {
+    margin-bottom: 10px;
+}
+
+.apply-section-container {
+    padding: 20px;
+}
+
+.info-text {
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    margin-top: 20px;
+}
+
+.btn-section-container {
+    padding: 20px;
+}
+
+.btn-section-content h2 {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+}
