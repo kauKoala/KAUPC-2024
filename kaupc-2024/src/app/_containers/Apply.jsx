@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 const Apply = () => {
     const [isStudent, setIsStudent] = useState(false);
@@ -8,6 +8,12 @@ const Apply = () => {
     const [isAgreedTerms, setIsAgreedTerms] = useState(false);
 
     const allChecked = isStudent && isConfirmedDate && isAgreedTerms;
+
+    const handleClick = () => {
+        if (typeof window !== 'undefined') {
+            window.location.href = 'https://scm.kau.ac.kr/ko/program/all/view/1445';
+        }
+    };
 
     return (
         <div className="apply-section-container">
@@ -36,7 +42,7 @@ const Apply = () => {
                 />
                 대회 진행과 유의사항을 모두 확인했습니다.
             </label>
-            <button className="apply-button" disabled={!allChecked}>
+            <button className="apply-button" disabled={!allChecked} onClick={handleClick}>
                 지금 참여하기
             </button>
         </div>

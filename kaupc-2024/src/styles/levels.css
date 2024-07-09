@@ -1,86 +1,146 @@
+/* levels.css */
+
 .container {
-    width: 90%;
-    max-width: 1500px;
+    width: 85%;
     margin: 0 auto;
     padding-bottom: 50px;
 }
-.logo-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
-.footer-container {
+.section {
+    margin-bottom: 40px;
     padding: 20px;
 }
 
-.footer-header {
-    margin-bottom: 10px;
-}
-
-.info-section-container {
-    padding: 20px;
-}
-
-.info-header {
+.section.visible {
     margin-top: 20px;
 }
 
-.info-subheader {
-    margin-top: 10px;
+.logoWrapper {
+    padding: 10px 0;
+    padding-top: 30px;
 }
 
-.info-detail {
-    margin-bottom: 20px;
-}
-
-.info-list-item {
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-
-.info-table {
-    width: 100%;
-    margin: 10px 0;
-}
-
-
-.info-table-header, .info-table-cell {
-    padding: 8px;
+.video-background {
+    margin-top: 50px;
 }
 
 .sum-section-container {
+    margin-top: 20px;
     padding: 20px;
 }
 
-.sum-info-list li {
-    margin-bottom: 10px;
+.info-section-container {
+    margin-top: 20px;
+    padding: 20px;
 }
 
 .apply-section-container {
+    margin-top: 20px;
     padding: 20px;
 }
 
-.info-text {
-    margin-bottom: 20px;
+.btn-section-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.footer-container {
+    margin-top: 20px;
+    padding: 20px;
+    padding-bottom: 50px;
+}
+
+.info-table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.info-table-header, .info-table-cell {
+    padding: 10px;
 }
 
 .apply-button {
     margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primary-button-bg);
+    color: var(--primary-button-color);
+    border: none;
+    cursor: pointer;
 }
 
-.btn-section-container {
-    padding: 20px;
-}
-
-.btn-section-content h2 {
-    margin-bottom: 20px;
-}
-
-.buttons {
-    gap: 10px;
+.apply-button:disabled {
+    background-color: var(--disabled-button-bg);
+    cursor: not-allowed;
 }
 
 .btn {
+    margin: 10px;
     padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-button-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-button-color);
+}
+
+.sum-info-list, .info-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.info-list-item {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    .section {
+        padding: 15px;
+    }
+    .info-table-header, .info-table-cell {
+        padding: 8px;
+    }
+    .apply-button {
+        padding: 8px 16px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .section {
+        padding: 10px;
+    }
+    .info-table-header, .info-table-cell {
+        padding: 5px;
+    }
+    .apply-button {
+        padding: 6px 12px;
+    }
+    .btn {
+        padding: 6px 12px;
+    }
 }

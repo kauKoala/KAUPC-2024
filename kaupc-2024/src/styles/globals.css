@@ -1,3 +1,5 @@
+/* globals.css */
+
 @import url('variables.css');
 @import url('levels.css');
 @import url("https://font.elice.io/css?family=Elice+Digital+Coding");
@@ -39,12 +41,22 @@
 }
 
 body {
-    font-family: 'NanumSquareNeo-Variable', sans-serif;
+    font-size: var(--font-size);
+    font-family: 'NanumSquareNeo-Variable', 'NanumSquareRound', sans-serif;
     color: var(--font-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.loading-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
 }
 
 .video-background {
@@ -54,7 +66,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* Ensure the video is behind other content */
+    z-index: -1;
 }
 
 #background-video {
@@ -67,12 +79,6 @@ body {
     height: auto;
     z-index: -1;
     transform: translate(-50%, -50%);
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 50px;
 }
 
 .logo-container {
@@ -92,7 +98,16 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: var(--background-color); /* 검은색 배경 */
+    background-color: var(--background-color);
+}
+
+.top-container{
+    display: flex;
+}
+
+.container{
+    display: block;
+    flex-wrap: wrap;
 }
 
 .section {
@@ -119,7 +134,7 @@ body {
 }
 
 .info-section-container {
-    background: transparent; /* 배경 제거 */
+    background: transparent;
     text-align: left;
     width: 100%;
     margin: 0 auto;
@@ -134,9 +149,7 @@ body {
 }
 
 .info-table {
-    width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
 }
 
 .info-table-row {
@@ -146,14 +159,19 @@ body {
 
 .info-table-header, .info-table-cell {
     flex: 1;
+    padding: 10px;
     text-align: center;
+    border-bottom: 1px solid var(--table-border-color);
 }
+
 .info-table-header {
     font-weight: var(--header-font-weight);
 }
 
 .sum-section-container {
     background: transparent;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .sum-info-list {
@@ -178,7 +196,7 @@ body {
 }
 
 .btn-section-container {
-    background: transparent; /* 배경 제거 */
+    background: transparent;
     text-align: center;
 }
 
@@ -207,4 +225,118 @@ body {
     color: var(--secondary-button-color);
 }
 
-@import url('responsive.css');
+.side-container {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.side-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-container li {
+    margin: 5px 0;
+}
+
+.side-container li.active {
+    font-weight: bold;
+    color: var(--primary-button-bg);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .logo-image {
+        max-width: 350px;
+    }
+
+    .side-container {
+        right: 15px;
+        padding: 8px;
+    }
+
+    .side-container li {
+        margin: 4px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .info-table-header, .info-table-cell {
+        padding: 8px;
+    }
+
+    .apply-button {
+        padding: 8px 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+
+    .logo-image {
+        max-width: 300px;
+    }
+
+    .side-container {
+        right: 10px;
+        padding: 6px;
+    }
+
+    .side-container li {
+        margin: 3px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .info-table-header, .info-table-cell {
+        padding: 5px;
+    }
+
+    .apply-button {
+        padding: 6px 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+    }
+
+    .logo-image {
+        max-width: 250px;
+    }
+
+    .side-container {
+        right: 5px;
+        padding: 4px;
+    }
+
+    .side-container li {
+        margin: 2px 0;
+    }
+}

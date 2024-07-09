@@ -1,9 +1,11 @@
 const section_id = {
-    BACK:"back",
+    LOAD:"loading",
+    BACK: "back",
     LOGO: "logo",
     SUM: "summary",
     INFO: "info",
     APPLY: "apply",
     LINK: "link",
     FOOT: "footer",
+    SIDE: "side",
 }
