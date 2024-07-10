@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import section_id from "@/app/_constants/section_id.js";
 import Load from "@/app/_components/Loading";
 import Back from "@/app/_components/Back";
@@ -26,30 +26,11 @@ export default function Home() {
     const [visibleSection, setVisibleSection] = useState(null);
 
     useEffect(() => {
-        // 로딩 상태를 3초 동안 유지한 후 로딩 상태를 해제
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 3000);
+        }, 1000);
 
         return () => clearTimeout(timer);
-    }, []);
-
-    useLayoutEffect(() => {
-        const updateMargin = () => {
-            if (logoRef.current && videoBackgroundRef.current && summaryContainerRef.current) {
-                const logoHeight = logoRef.current.offsetHeight;
-                videoBackgroundRef.current.style.marginTop = `${logoHeight}px`;
-                summaryContainerRef.current.style.marginTop = `${logoHeight}px`;
-            }
-        };
-
-        if (typeof window !== 'undefined') {
-            updateMargin();
-            window.addEventListener('resize', updateMargin);
-            return () => {
-                window.removeEventListener('resize', updateMargin);
-            };
-        }
     }, []);
 
     useEffect(() => {
