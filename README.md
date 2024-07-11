@@ -11,7 +11,7 @@
 
 ## Preview
 
-<br>
+![캡처](/readme/img.png)
 
 ## Getting Started
 
