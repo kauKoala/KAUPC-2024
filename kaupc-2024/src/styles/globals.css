@@ -45,9 +45,8 @@ body {
     font-family: 'NanumSquareNeo-Variable', 'NanumSquareRound', sans-serif;
     color: var(--font-color);
     background-color: var(--loading-color);
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    white-space: pre-wrap;
 }
 
 .loading-wrapper {
@@ -56,15 +55,43 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: var(--loading-color);
+    position:fixed;
+    left:50%;
+    top:50%;
+    z-index:100;
+    transform:translate(-50%, -50%);
+    text-align:center;
+    font-family: 'NEXON Lv1 Gothic OTF', 'NanumSquareRound', serif;
+    background: var(--loading-color);
+    box-shadow:0 3px 0 rgba(0,0,0,.2);
 }
 
-.loading-wrapper {position:fixed; left:50%; top:50%; z-index:100; transform:translate(-50%, -50%); padding:20px; width:200px; text-align:center; background: var(--loading-color); box-shadow:0 3px 0 rgba(0,0,0,.2);}
-.loading-wrapper .circles {padding-top:10px;}
-.loading-wrapper .circles i {animation:scaleBounce .3s alternate infinite; display:inline-block; margin:0 4px; width:10px; height:10px; background: #ffffff; border-radius:50em;}
-.loading-wrapper .circles i:nth-child(2) {animation-delay:.1s;}
-.loading-wrapper .circles i:nth-child(3) {animation-delay:.2s;}
-.loading-wrapper p {margin-top:20px; font-size:18px;}
+.loading-image {
+    width: 190%;
+    height: auto;
+}
+
+
+.loading-wrapper .circles i {
+    animation:scaleBounce .3s alternate infinite;
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background: #ffffff;
+    border-radius:50em;
+}
+
+.loading-wrapper .circles i:nth-child(2) {
+    animation-delay:.1s;
+}
+.loading-wrapper .circles i:nth-child(3) {
+    animation-delay:.2s;
+}
+
+.loading-wrapper p {
+    font-size:18px;
+}
+
 @keyframes scaleBounce{
     from {transform:scale(.7)}
     to {transform:scale(1.3)}
@@ -135,6 +162,11 @@ body {
     padding-bottom: 50px;
 }
 
+.footer-image {
+    width: 90%;
+    height: auto;
+}
+
 .footer-header {
     font-weight: var(--header-font-weight);
 }
@@ -152,10 +184,14 @@ body {
 
 .info-header {
     font-weight: var(--header-font-weight);
+    font-size: 26px;
+    margin: 12px 0;
+    margin-top: 40px;
 }
 
 .info-subheader {
     font-weight: var(--header-font-weight);
+    font-size: 22px;
 }
 
 .info-table {
@@ -169,7 +205,7 @@ body {
 
 .info-table-header, .info-table-cell {
     flex: 1;
-    padding: 10px;
+    padding: 0 0 20px;
     text-align: center;
     border-bottom: 1px solid var(--table-border-color);
 }
@@ -186,23 +222,47 @@ body {
 
 .sum-info-list {
     list-style-type: none;
-    padding: 0;
 }
 
 .apply-section-container {
     background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .apply-button {
     background-color: var(--primary-button-bg);
     color: var(--primary-button-color);
-    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    font-size: 18px;
+}
+
+
+.apply-button:hover {
+    background-color: #333333;
+    color: var(--font-color);
 }
 
 .apply-button:disabled {
     background-color: var(--disabled-button-bg);
+    color: #a9a9a9;
     cursor: not-allowed;
+}
+
+.checkbox-label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 .btn-section-container {
@@ -213,7 +273,7 @@ body {
 .btn-section-content h2 {
 }
 
-.buttons {
+.buttons .load-btn {
     display: flex;
     justify-content: center;
 }
@@ -241,7 +301,7 @@ body {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
     color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -255,6 +315,7 @@ body {
 
 .side-container li {
     margin: 5px 0;
+    cursor: pointer;
 }
 
 .side-container li.active {
@@ -314,6 +375,10 @@ body {
     .side-container li {
         margin: 3px 0;
     }
+
+    .loading-image {
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -348,5 +413,9 @@ body {
 
     .side-container li {
         margin: 2px 0;
+    }
+
+    .loading-image {
+        margin-bottom: 40px;
     }
 }

@@ -8,11 +8,11 @@
     --table-header-background: #333;
     --transition-opacity: 1s ease-in-out;
     --primary-color: #ffffff;
-    --secondary-color: #a9a9a9;
-    --primary-button-bg: #e1e1e1;
-    --primary-button-color: #ffffff;
+    --secondary-color: #5e5e5e;
+    --primary-button-bg: #ffffff;
+    --primary-button-color: #000000;
     --secondary-button-bg: #5a6268;
-    --secondary-button-color: #000000;
+    --secondary-button-color: #ffffff;
     --disabled-button-bg: #555;
     --loading-color:#191919;
 }

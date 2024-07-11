@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useLayoutEffect, useState } from "react";
 import section_id from "@/app/_constants/section_id.js";
-import Load from "@/app/_components/Loading";
 import Back from "@/app/_components/Back";
 import Logo from "@/app/_components/Logo";
 import Spacing from "@/app/_components/Spacing";
@@ -22,16 +21,8 @@ export default function Home() {
     const applyContainerRef = useRef(null);
     const linkContainerRef = useRef(null);
     const footContainerRef = useRef(null);
-    const [isLoading, setIsLoading] = useState(true);
+
     const [visibleSection, setVisibleSection] = useState(null);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, []);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -81,40 +72,34 @@ export default function Home() {
 
     return (
         <>
-            {isLoading ? (
-                <Load />
-            ) : (
-                <>
-                    <Back ref={videoBackgroundRef} />
-                    <div className="logoWrapper" ref={logoRef}>
-                        <Logo id={section_id.LOGO} />
-                    </div>
-                    <div className="top-controller">
-                        <div className="container">
-                            <section id={section_id.SUM} className="section" ref={summaryContainerRef}>
-                                <Summary />
-                            </section>
-                            <section id={section_id.INFO} className="section" ref={infoContainerRef}>
-                                <Info />
-                            </section>
-                            <section id={section_id.APPLY} className="section" ref={applyContainerRef}>
-                                <Apply />
-                            </section>
-                            <Spacing />
-                            <section id={section_id.LINK} className="section" ref={linkContainerRef}>
-                                <Link_ />
-                            </section>
-                            <Spacing />
-                            <section id={section_id.FOOT} className="section" ref={footContainerRef}>
-                                <Footer />
-                            </section>
-                        </div>
-                        <div>
-                            <Side visibleSection={visibleSection} onSectionClick={scrollToSection} />
-                        </div>
-                    </div>
-                </>
-            )}
+            <Back ref={videoBackgroundRef} />
+            <div className="logoWrapper" ref={logoRef}>
+                <Logo id={section_id.LOGO} />
+            </div>
+            <div className="top-controller">
+                <div className="container">
+                    <section id={section_id.SUM} className="section" ref={summaryContainerRef}>
+                        <Summary />
+                    </section>
+                    <section id={section_id.INFO} className="section" ref={infoContainerRef}>
+                        <Info />
+                    </section>
+                    <section id={section_id.APPLY} className="section" ref={applyContainerRef}>
+                        <Apply />
+                    </section>
+                    <Spacing />
+                    <section id={section_id.LINK} className="section" ref={linkContainerRef}>
+                        <Link_ />
+                    </section>
+                    <Spacing />
+                    <section id={section_id.FOOT} className="section" ref={footContainerRef}>
+                        <Footer />
+                    </section>
+                </div>
+                <div>
+                    <Side visibleSection={visibleSection} onSectionClick={scrollToSection} />
+                </div>
+            </div>
         </>
     );
 }

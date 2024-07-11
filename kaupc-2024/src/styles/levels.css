@@ -1,5 +1,34 @@
 /* levels.css */
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div{
+    margin: 10px 0;
+}
+
+li{
+    margin:5px 0;
+}
+
+.loading-wrapper {
+    padding:20px;
+}
+
+.loading-wrapper .circles {
+    padding-top:10px;
+}
+
+.loading-wrapper .circles i {
+    margin:0 4px;
+}
+
+.loading-wrapper p {
+    margin-top:20px;
+}
+
 .container {
     width: 85%;
     margin: 0 auto;
@@ -7,12 +36,11 @@
 }
 
 .section {
-    margin-bottom: 40px;
     padding: 20px;
 }
 
 .section.visible {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .logoWrapper {
@@ -20,44 +48,40 @@
     padding-top: 30px;
 }
 
-.video-background {
-    margin-top: 50px;
-}
-
 .sum-section-container {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .info-section-container {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .apply-section-container {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .btn-section-container {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .footer-container {
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 0;
     padding-bottom: 50px;
 }
 
 .info-table {
-    margin-top: 10px;
+    margin: 20px 0;
     border-collapse: collapse;
     width: 90%;
 }
 
 .info-table-header, .info-table-cell {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .apply-button {
@@ -101,6 +125,10 @@
 
 .info-list-item {
     margin-bottom: 10px;
+}
+
+.buttons{
+    margin-top: 30px;
 }
 
 @media (max-width: 1200px) {

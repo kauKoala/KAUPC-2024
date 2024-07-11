@@ -1,13 +1,12 @@
-"use client";
-
 import React, { useState } from 'react';
 
 const Apply = () => {
-    const [isStudent, setIsStudent] = useState(false);
+    const [isKauStudent, setIsKauStudent] = useState(false);
+    const [isAISWStudent, setIsAISWStudent] = useState(false);
     const [isConfirmedDate, setIsConfirmedDate] = useState(false);
     const [isAgreedTerms, setIsAgreedTerms] = useState(false);
 
-    const allChecked = isStudent && isConfirmedDate && isAgreedTerms;
+    const allChecked = isKauStudent && isAISWStudent && isConfirmedDate && isAgreedTerms;
 
     const handleClick = () => {
         if (typeof window !== 'undefined') {
@@ -17,16 +16,24 @@ const Apply = () => {
 
     return (
         <div className="apply-section-container">
-            <p className="info-text">모든 준비가 끝났다면, 이제 마지막 단계에요!</p>
-            <label>
+            <p className="info-subheader">지원 자격을 충족하는지 확인해보아요!</p>
+            <label className="checkbox-label">
                 <input
                     type="checkbox"
-                    checked={isStudent}
-                    onChange={(e) => setIsStudent(e.target.checked)}
+                    checked={isKauStudent}
+                    onChange={(e) => setIsKauStudent(e.target.checked)}
                 />
                 현재 한국항공대학교 학부 재학 / 휴학생으로, 대학원에 재학중이지 않습니다.
             </label>
-            <label>
+            <label className="checkbox-label">
+                <input
+                    type="checkbox"
+                    checked={isAISWStudent}
+                    onChange={(e) => setIsAISWStudent(e.target.checked)}
+                />
+                AI융합대학 소속 학부생이거나 SW중심대학 참여 학부과 학생, 혹은 마이크로 디그리 이수자입니다.
+            </label>
+            <label className="checkbox-label">
                 <input
                     type="checkbox"
                     checked={isConfirmedDate}
@@ -34,13 +41,13 @@ const Apply = () => {
                 />
                 본 대회 일정이 대면으로 진행될 예정을 확인했습니다.
             </label>
-            <label>
+            <label className="checkbox-label">
                 <input
                     type="checkbox"
                     checked={isAgreedTerms}
                     onChange={(e) => setIsAgreedTerms(e.target.checked)}
                 />
-                대회 진행과 유의사항을 모두 확인했습니다.
+                대회 진행 사항을 모두 확인했습니다.
             </label>
             <button className="apply-button" disabled={!allChecked} onClick={handleClick}>
                 지금 참여하기
