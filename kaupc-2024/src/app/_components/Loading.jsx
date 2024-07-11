@@ -27,7 +27,7 @@ const Loading = () => {
 
             {showButton && (
                 <div className="load-btn">
-                <a href="http://localhost:3000/" className="btn btn-primary">START!</a>
+                <a href="https://kaupc2024.netlify.app/" className="btn btn-primary">START!</a>
             </div>)}
         </div>
     );
