@@ -107,7 +107,7 @@ body {
     z-index: -1;
 }
 
-#background-video {
+#background-image {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -117,6 +117,7 @@ body {
     height: auto;
     z-index: -1;
     transform: translate(-50%, -50%);
+    object-fit: cover;
 }
 
 img {
