@@ -96,9 +96,9 @@ export default function Home() {
                         <Footer />
                     </section>
                 </div>
-                <div>
-                    <Side visibleSection={visibleSection} onSectionClick={scrollToSection} />
-                </div>
+                //<div>
+                    //<Side visibleSection={visibleSection} onSectionClick={scrollToSection} />
+                //</div>
             </div>
         </>
     );
