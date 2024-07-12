@@ -17,7 +17,7 @@ const Apply = () => {
 
     return (
         <div className="apply-section-container">
-            <p className="info-subheader">지원 자격을 충족하는지 확인해보아요!</p>
+            <p className="info-header">지원 자격을 충족하는지 확인해보아요!</p>
             <label className="checkbox-label">
                 <input
                     type="checkbox"
@@ -32,7 +32,7 @@ const Apply = () => {
                     checked={isAISWStudent}
                     onChange={(e) => setIsAISWStudent(e.target.checked)}
                 />
-                AI융합대학 소속 학부생이거나 SW중심대학 참여 학부과 학생, 혹은 마이크로 디그리 이수자입니다.
+                AI융합대학 소속 학부생이거나 SW중심대학 참여 학부과 학생, 혹은 마이크로 디그리 신청자입니다.
             </label>
             <label className="checkbox-label">
                 <input
@@ -56,7 +56,7 @@ const Apply = () => {
                     checked={isAgreedTerms}
                     onChange={(e) => setIsAgreedTerms(e.target.checked)}
                 />
-                대회 규정 사항을 모두 확인했습니다.
+                대회 규정을 모두 확인했습니다.
             </label>
             <button className="apply-button" disabled={!allChecked} onClick={handleClick}>
                 지금 참여하기
