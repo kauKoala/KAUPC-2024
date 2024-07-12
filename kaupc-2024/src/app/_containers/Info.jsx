@@ -61,7 +61,7 @@ const Info = () => {
                     </div>
                     <div className="info-table-row">
                         <div className="info-table-cell">5위</div>
-                        <div className="info-table-cell">4명</div>
+                        <div className="info-table-cell">3명</div>
                         <div className="info-table-cell">치킨 기프트콘</div>
                         <div className="info-table-cell">-</div>
                     </div>
