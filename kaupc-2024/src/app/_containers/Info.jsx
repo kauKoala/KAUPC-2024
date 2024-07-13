@@ -17,7 +17,7 @@ const Info = () => {
             <div className="info-list-item">마이크로디그리 신청자 역시 참여하실 수 있습니다.</div>
             <div className="info-header">참가 신청 기간</div>
             <div className="info-detail">
-                <div>7월 19일부터 7월 26일까지</div>
+                <div>6월 19일 (수) 00시 00분부터 7월 26일 (금) 18시 00분까지</div>
             </div>
             <div className="info-header">대회 진행</div>
             <div className="info-detail">
