@@ -283,6 +283,10 @@ img {
     justify-content: center;
 }
 
+.load-btn{
+    padding: 10px 30px;
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;
