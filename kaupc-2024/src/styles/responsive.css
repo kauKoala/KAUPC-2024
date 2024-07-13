@@ -34,7 +34,7 @@
 
 @media (max-width: 768px) {
     .container {
-        padding: 10px;
+        padding: 10px 50px;
     }
 
     .logo-container {
@@ -68,7 +68,7 @@
 
 @media (max-width: 480px) {
     .container {
-        padding: 5px;
+        padding: 5px 25px;
     }
 
     .logo-container {
